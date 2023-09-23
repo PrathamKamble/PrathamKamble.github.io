@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Student Portal</title>
+</head>
+<body>
+    <header id="header">
+        <h2 class="logo">Student Portal</h2>
+        <img src="./assets/logo.png" alt="logo" width="50px">
+    </header>
+
+    <main id="main">
+        <div class="search-box">
+            <input type="search" id="searchInput" class="search" placeholder="Search">
+            <button class="btn" id="searchBtn">Search</button>
+        </div>
+
+        <div class="flex-btn">
+            <button id="sortAtoZ" class="btn">Sort A &#8594; Z</button>
+            <button id="sortZtoA" class="btn">Sort Z &#8594; A</button>
+            <button id="sortbymarks" class="btn">Sort By Marks</button>
+            <button id="sortbypassing" class="btn">Sort By Passing</button>
+            <button id="sortbyclass" class="btn">Sort By Class</button>
+            <button id="sortbygender" class="btn">Sort By Gender</button>
+        </div>
+
+        <div class="container">
+            <div class="table-box">
+                <table style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Gender</th>
+                            <th>Class</th>
+                            <th>Marks</th>
+                            <th>Passing</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody id="data-output">       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="/script.js"></script>
+</body>
+</html>

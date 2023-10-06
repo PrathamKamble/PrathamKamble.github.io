@@ -3,103 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./style.css">
-    <title>Landing Page</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Student Portal</title>
 </head>
 <body>
-    <div class="main">
-        <header id="hero">
-            <nav id="navbar">
-                <a href="#!" class="logo"><img src="./assets/logo.png" alt="logo"></a>
-                <ul class="nav-menu">
-                    <li class="nav-link active">Home</li>
-                    <li class="nav-link">Internship</li>
-                    <li class="nav-link">Services</li>
-                    <li class="nav-link">Contact Us</li>
-                </ul>
-            </nav>
+    <header id="header">
+        <h2 class="logo">Student Portal</h2>
+        <img src="./assets/logo.png" alt="logo" width="50px">
+    </header>
 
-            <div class="hero-section">
-                <div class="hero-left">
-                    <div class="content">
-                        <h1>Make your concept <br> to be more professional</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, magni nulla! <br> Facere sed recusandae perspiciatis labore, voluptates quo! Ea, adipisci.</p>
-                        <button class="btn">Contact Us</button>
-                    </div>
-                </div>
-                <div class="hero-right">
-                    <img src="./assets/hero-img.png" alt="hero-image">
-                </div>
-            </div>
-        </header>
+    <main id="main">
+        <div class="search-box">
+            <input type="search" id="searchInput" class="search" placeholder="Search">
+            <button class="btn" id="searchBtn">Search</button>
+        </div>
 
-        <section id="about">
-            <div class="about-top">
-                <h1>About Us</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, dolorem?</p>
-            </div>
-            <div class="abt-flex">
-                <div class="about-left">
-                    <img src="./assets/about-img.png" alt="about image">
-                </div>
+        <div class="flex-btn">
+            <button id="sortAtoZ" class="btn">Sort A &#8594; Z</button>
+            <button id="sortZtoA" class="btn">Sort Z &#8594; A</button>
+            <button id="sortbymarks" class="btn">Sort By Marks</button>
+            <button id="sortbypassing" class="btn">Sort By Passing</button>
+            <button id="sortbyclass" class="btn">Sort By Class</button>
+            <button id="sortbygender" class="btn">Sort By Gender</button>
+        </div>
 
-                <div class="about-right">
-                    <div class="content">
-                        <h2>We Are Leading StartUp Company In India</h2>
-                        <p>As An Organization We Creates And Hosts Web And <br> Android Applications For Our Clients. </p>
-                        <br>
-                        <br>
-                        <p>We Connect With Our Users Throughout Development To Ensure That We Are Still Aligned With The End-Goal. We Are Committed To Producing Exceptional Software For Each Of Our Clients.</p>
-                    </div>
-                </div>
+        <div class="container">
+            <div class="table-box">
+                <table style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Gender</th>
+                            <th>Class</th>
+                            <th>Marks</th>
+                            <th>Passing</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody id="data-output">       
+                    </tbody>
+                </table>
             </div>
-        </section>
-
-        <section id="services">
-            <div class="service-top">
-                <h1>Services</h1>
-                <p>We Provide Internships In Different Sectors For Freshers
-                </p>
-            </div>
-            <div class="card-list">
-                <div class="card">
-                    <img src="./assets/web-dev.png" alt="web development">
-                    <div class="card-body">
-                        <h2>Web Development</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                        <button>Apply</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="./assets/app.png" alt="web development">
-                    <div class="card-body">
-                        <h2>Android Development</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                        <button>Apply</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="./assets/java.png" alt="web development">
-                    <div class="card-body">
-                        <h2>Java Development</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                        <button>Apply</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="./assets/cloud.png" alt="web development">
-                    <div class="card-body">
-                        <h2>Cloud Computing</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                        <button>Apply</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <footer id="footer">
-            <p>Made With ❤️ By Pratham Kamble</p>
-        </footer>
-    </div>
+        </div>
+    </main>
+    <script src="/script.js"></script>
 </body>
 </html>

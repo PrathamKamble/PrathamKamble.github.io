@@ -1,284 +1,120 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
-
-html, body{
-    height: 100%;
-    width: 100%;
+html{
     scroll-behavior: smooth;
 }
 
-#hero{
+body{
     width: 100%;
-    height: 80vh;
+    height: 100%;
 }
 
-/*---------- navbar css --------- */
+:root{
+    --white: #ffffff;
+    --black: #000000;
+    --grey: #D9D9D9;
+}
 
+.btn{
+    width: 13vw;
+    padding: 20px;
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    font-size: 1.1vw;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+}
 
-#navbar{
+.btn:active{
+    top: 2px;
+}
+
+#header{
+    height: 80px;
+    width: 100%;
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    justify-content: space-between;
+}
+
+#header .logo{
+    color: var(--white);
+}
+
+#main{
+    background-color: var(--grey);
+    padding: 35px 40px;
+    height: calc(100vh - 80px);
+}
+
+.search-box{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 100px;
-    height: 100px;
 }
 
-.logo > img{
-    width: 150px;
+.search-box > .search{
+    width: 83vw;
+    padding: 20px;
+    outline: 1px solid black;
+    font-size: 1.1vw;
 }
 
-.nav-menu{
-    list-style-type: none;
+.search-box >
+input::placeholder {
+    font-size: 1.1vw;
+    color: var(--black);
+}
+
+.search-box > .btn{
+    outline: 3px solid black;
+}
+
+.flex-btn{
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    padding-top: 30px;
 }
 
-.nav-link{
-    font-size: 18px;
-    font-weight: 600;
-    color: #3f444c;
-    cursor: pointer;
-    transition: all .2s ease-in-out;
+.container{
+    padding-top: 30px;
+    max-height: fit-content;
+    border-bottom: 1px solid black;
 }
 
-.nav-link:hover{
-    font-size: 18px;
-    font-weight: 600;
-    color: #25cffe;
+.table-box{
+    overflow-y: scroll;
+    height: fit-content;
+    max-height: 63vh;
 }
 
-.active{
-    color: #25cffe;
-}
-
-/*------------- hero sections ----------------- */
-
-.hero-section{
-    width: 100%;
-    display: flex;
-}
-
-.hero-left{
-    width: 50%;
-    height: calc(80vh - 100px);
-    display: flex;
-    align-items: center;
-    padding-left: 100px;
-}
-
-.hero-right{
-    width: 50%;
-    height: calc(80vh - 100px);
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    padding-right: 100px;
-}
-
-.hero-right img{
-    width: 90%;
-}
-
-.hero-left > .content h1{
-    font-size: 40px;
-    color: #3f444c;
-    margin-bottom: 18px;
-}
-
-.hero-left > .content p{
-    font-size: 20px;
-    color: #8a8a8a;
-    margin-bottom: 60px;
-}
-
-.hero-left > .content .btn{
-    padding: 15px 30px;
-    border: none;
-    border-radius: 100px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-    background-color: #25cffe;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    transition: box-shadow .15s,transform .15s;
-}
-
-.hero-left > .content .btn:hover{
-    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #25cffe 0 -3px 0 inset;
-    transform: translateY(-2px);
-}
-
-/*--------------------- about css -------------- */
-
-#about{
-    width: 100%;
-    height: 90vh;
-    padding: 40px 100px;
-    /* background-color: #25cffe2f; */
-}
-
-.abt-flex{
-    display: flex;
-    height: 100%;
-}
-
-.about-top{
-    text-align: center;
-}
-
-.about-top h1{
-    font-size: 35px;
-    color: #3f444c;
-}
-
-.about-top p{
-    color: #8a8a8a;
-    font-size: 16px;
-    position: relative;
-}
-
-.about-top p::after,
-.service-top p::after{
-    content: "";
-    position: absolute;
-    background-color: #25cffe;
-    height: 3px;
-    width: 6%;
-    left: 50rem;
-    bottom: -20px;
-}
-
-.about-left{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.about-left img{
-    width: 90%;
-}
-
-.about-right{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.about-right > .content h2{
-    color: #3f444c;
-    margin-bottom: 10px;
-    font-size: 30px;
-}
-
-.about-right > .content p{
-    color: #8a8a8a;
-    text-align: justify;
-    font-size: 17px;
-}
-
-/*--------------------- Services css -------------- */
-
-#services{
-    height: 90vh;
-    padding: 40px 100px;
-}
-
-.service-top{
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.service-top h1{
-    font-size: 35px;
-    color: #3f444c;
-}
-
-.service-top p{
-    color: #8a8a8a;
-    font-size: 16px;
-    position: relative;
-}
-
-.card-list{
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-    height: 60vh;
-}
-
-.card{
-    background-color: white;
-    border-radius: 30px;
-    padding: 20px 40px 40px;
-    text-align: center;
-    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    transition: all 1s;
-}
-
-.card:hover{
-    transform: scale(1.1);
-}
-
-.card:hover img{
-    transform: rotate(360deg);
-}
-
-.card img{
-    width: 260px;
-    transition: all 1s;
-    height: 260px;
-}
-
-.card-body h2{
-    font-size: 22px;
-    color: #3f444c;
-}
-
-.card-body p{
-    margin-bottom: 20px;
-    color: #8a8a8a;
-}
-
-.card-body > button{
-    padding: 13px 35px;
-    border: none;
-    border-radius: 100px;
-    font-size: 15px;
-    font-weight: 600;
-    color: #fff;
-    background-color: #25cffe;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    transition: all 250ms;
-}
-
-.card-body > button:hover {
-    background-color: #42c7ec;
-    transform: translateY(1);
+.table-box > table, th, td {
+    border:1px solid black;
+    border-collapse: collapse;
   }
 
+  table th{
+    position: sticky;
+    top: 0px;
+    background-color: var(--black);
+    color: var(--white);
+    border-color: var(--white);
+  }
 
-  /*------------------- footer css ---------------------- */
-
-#footer{
-    color: #3f444c;
-    background-color: #25cffe;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  th, td{
     padding: 20px;
-}
-
-#footer p{
-    font-size: 20px;
-    font-weight: 600;
-    color: #3f444c;
-}
+    text-align: left;
+    font-size: 1.1vw;
+  }
